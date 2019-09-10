@@ -1,0 +1,4 @@
+[submodule "public"]
+	path = public
+	url = https://github.com/cojaq/hugo_teste.github.io.git
+	branch = master
