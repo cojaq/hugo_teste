@@ -12,6 +12,8 @@ superuser: false
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
 role: IC Student
+# Year (started year or finished year, in case alumni)
+year: 2018
 
 # Organizations/Affiliations
 organizations:

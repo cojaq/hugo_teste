@@ -11,7 +11,9 @@ superuser: false
 
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
-role: PhD Alumni, co-supervison (2014)
+role: PhD Alumni, co-supervision (2014)
+# Year (started year or finished year, in case alumni)
+year: 2014
 
 # Organizations/Affiliations
 organizations:

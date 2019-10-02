@@ -34,7 +34,7 @@
   {{/* {{ range $query.ByParam "display_order" }} */}}
   {{ range sort ($.Scratch.Get "enriched") ".new_order" "desc" }}
 
-  {{ $avatar := (.page.Resources.ByType "image").GetMatch "*avatar*" }}
+  {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}
   {{ $link := "" }}
   {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Split .Path).Dir)) }}
@@ -53,9 +53,9 @@
     {{ end }}
 
     <div class="portrait-title">
-      <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .page.Params.name }}{{if $link}}</a>{{end}}</h2>
-      {{ with .page.Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
-      {{ with .page.Params.interests }}<p class="people-interests">{{ delimit . ", " | markdownify | emojify }}</p>{{ end }}
+      <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Params.name }}{{if $link}}</a>{{end}}</h2>
+      {{ with .Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+      {{ with .Params.interests }}<p class="people-interests">{{ delimit . ", " | markdownify | emojify }}</p>{{ end }}
     </div>
   </div>
 

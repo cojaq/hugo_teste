@@ -4,7 +4,7 @@ name: Luiz Henrique Mariano de Araújo
 
 # Username (this should match the folder name)
 authors:
-- luiz_henrique
+- luiz-henrique
 
 # Is this the primary user of the site?
 superuser: false
@@ -12,6 +12,8 @@ superuser: false
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
 role: IC/TF Alumni (2002)
+# Year (started year or finished year, in case alumni)
+year: 2002
 
 # Organizations/Affiliations
 organizations:
