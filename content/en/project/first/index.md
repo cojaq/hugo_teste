@@ -8,9 +8,11 @@ authors:
  - nina
 
 tags: 
- - teste1
+ - structured data analysis
+ - high condensed info extraction 
+ - low latency document generatos
 categories: 
- - machinelll
+ - Deep Learning
 date: 2019-09-08T02:10:01-03:00
 
 # Optional external URL for project (replaces project detail page).
@@ -21,7 +23,7 @@ external_link: ""
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ""
-  focal_point: ""
+  focal_point: "smart"
   preview_only: false
 
 # Custom links (optional).

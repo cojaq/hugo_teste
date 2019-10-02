@@ -1,9 +1,10 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Object_detection"
-summary: ""
-authors: []
+title: "Object Detection"
+summary: "Object detection in natural images"
+authors: 
+ - tiago
 tags: []
 categories: []
 date: 2019-09-08T13:09:40-03:00

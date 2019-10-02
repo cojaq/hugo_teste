@@ -1,6 +1,7 @@
 {{ $ := .root }}
 {{ $page := .page }}
 
+{{ partial "svg_style" }}
 <div class="row featurette">
   {{ with $page.Title }}
   <div class="col-md-12 section-heading">
@@ -16,7 +17,11 @@
     {{ $pack_prefix = "fa" }}
   {{ end }}
   <div class="col-12 col-sm-4">
-    {{ with .icon }}<div class="featurette-icon"><i class="{{ $pack }} {{ $pack_prefix }}-{{ . }}"></i></div>{{ end }}
+    {{ if eq .icon_pack "svg" }}
+		{{ with .icon }}<div class="featurette-icon"> {{ partial "svg" . }} </div>{{ end }}
+		{{ else }}
+		{{ with .icon }}<div class="featurette-icon"><i class="{{ $pack }} {{ $pack_prefix }}-{{ . }}"></i></div>{{ end }}
+		{{ end }}
     <h3>{{ .name | markdownify | emojify }}</h3>
     {{ with .description }}<p>{{ . | markdownify | emojify }}</p>{{ end }}
   </div>
