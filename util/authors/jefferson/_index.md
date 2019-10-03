@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Jefferson Schoenfeld 
+name: Jefferson Schoenfeld
 
 # Username (this should match the folder name)
 authors:
@@ -68,7 +68,8 @@ social:
 email: ""
 
 #Value used to order authors list
-display_order: 40 
+# pos-doc: 10, PhD: 20, MSc: 30, IC: 40, TF: 45 
+display_order: 45 
   
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
@@ -77,7 +78,7 @@ user_groups:
 - Alumni
 ---
 
-Jefferson Schoenfeld  is a researcher of machine learning departament at the USP ML labs...
+Jefferson Schoenfeld is a researcher of machine learning departament at the USP ML labs...
 
 ## What is Lorem Ipsum?
 

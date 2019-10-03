@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Ana Martinazzo 
+name: Ana Martinazzo
 
 # Username (this should match the folder name)
 authors:
@@ -68,7 +68,8 @@ social:
 email: ""
 
 #Value used to order authors list
-display_order: 50 
+# pos-doc: 10, PhD: 20, MSc: 30, IC: 40, TF: 45 
+display_order: 30 
   
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
@@ -77,7 +78,7 @@ user_groups:
 - Researchers
 ---
 
-Ana Martinazzo  is a researcher of machine learning departament at the USP ML labs...
+Ana Martinazzo is a researcher of machine learning departament at the USP ML labs...
 
 ## What is Lorem Ipsum?
 

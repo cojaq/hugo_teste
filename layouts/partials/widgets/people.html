@@ -15,13 +15,22 @@
   </div>
   {{ end }}
 
-  {{ range site.Pages }}
-  {{ range .Params.author }}
-  {{ println . }}
-  {{ end }}
-  {{ $new_order := .Params.display_order }}
-    {{ $.Scratch.Add "enriched" (slice (dict "page" . "new_order" $new_order)) }}
-  {{ end }}
+
+  {{ range where (where $.Site.Pages "Type" "authors") ".Params.name" "!=" nil}}
+
+		{{ if in .Params.user_groups "Alumni" }} 
+		  {{ $year := sub 2050 (int .Params.year) }} 
+	    {{ $order := mul .Params.display_order 10000 }}
+      {{ $score := add (int $order) (int $year) }}
+      {{ $.Scratch.Add "enriched" (slice (dict "page" . "score" $score)) }}
+		{{ else }}
+	    {{ $year := .Params.year }}
+	    {{ $order := mul .Params.display_order 10000 }}
+      {{ $score := add (int $order) (int $year) }}
+      {{ $.Scratch.Add "enriched" (slice (dict "page" . "score" $score)) }}
+		{{ end }}
+
+  {{ end }} 
 
   {{ range $page.Params.user_groups }}
 
@@ -34,9 +43,7 @@
 
   {{ $query := where ($.Scratch.Get "enriched") ".page.Params.user_groups" "intersect" (slice .) }}
 
-  {{/* {{ range $query.ByParam "display_order" }} */}}
-  {{/* {{ range sort ($.Scratch.Get "enriched") ".new_order" "desc" }} */}}
-  {{ range sort $query ".new_order"}}
+  {{ range sort $query ".score"}}
 
   {{ $avatar := (.page.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}

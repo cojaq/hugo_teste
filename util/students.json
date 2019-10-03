@@ -1,42 +1,42 @@
 [
     {
         "username": "ana",
-        "name": "Ana Martinazzo ",
+        "name": "Ana Martinazzo",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2018
     },
     {
         "username": "ana-lucia",
-        "name": "Ana Lucia Lima Marreiros Maia ",
+        "name": "Ana Lucia Lima Marreiros Maia",
         "role": "PhD Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 20,
         "year": 2015
     },
     {
         "username": "augusto",
-        "name": "Augusto César Monteiro Silva ",
+        "name": "Augusto César Monteiro Silva",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2018
     },
     {
         "username": "daniel",
-        "name": "Daniel Sakuma ",
+        "name": "Daniel Sakuma",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2019
     },
     {
@@ -46,92 +46,92 @@
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2018
     },
     {
         "username": "joseph",
-        "name": "Joseph Hans Murrugarra Llerena ",
+        "name": "Joseph Hans Murrugarra Llerena",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2016
     },
     {
         "username": "lais",
-        "name": "Laís C. T. R. de Oliveira ",
+        "name": "Laís C. T. R. de Oliveira",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2000
     },
     {
         "username": "leonardo",
-        "name": "Leonardo Blanger ",
+        "name": "Leonardo Blanger",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2018
     },
     {
         "username": "mateus",
-        "name": "Mateus Espadoto ",
+        "name": "Mateus Espadoto",
         "role": "PhD Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 20,
         "year": 2017
     },
     {
         "username": "pedro",
-        "name": "Pedro Henrique Barbosa de Almeida ",
+        "name": "Pedro Henrique Barbosa de Almeida",
         "role": "IC Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 40,
         "year": 2018
     },
     {
         "username": "renan",
-        "name": "Renan Cesar Jacomassi ",
+        "name": "Renan Cesar Jacomassi",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2017
     },
     {
         "username": "samara",
-        "name": "Samara B. N. de Vasconcellos ",
+        "name": "Samara B. N. de Vasconcellos",
         "role": "MSc Student, co-supervision",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2000
     },
     {
         "username": "sergio",
-        "name": "Sérgio Yuji Hayashi ",
+        "name": "Sérgio Yuji Hayashi",
         "role": "MSc Student",
         "work": "",
         "category": "current",
         "group": "Researchers",
-        "display_order": 50,
+        "display_order": 30,
         "year": 2018
     },
     {
         "username": "frank",
-        "name": "Frank D. Julca-Aguilar ",
+        "name": "Frank D. Julca-Aguilar",
         "role": "Post-Doctoral Alumni (2018)",
         "work": "",
         "category": "alumni_pos",
@@ -141,7 +141,7 @@
     },
     {
         "username": "bruno",
-        "name": "Bruno Klava ",
+        "name": "Bruno Klava",
         "role": "PhD Alumni (2014)",
         "work": "Redução no esforço de interação em segmentação de imagens digitais através de aprendizagem computacional",
         "category": "alumni_phd",
@@ -151,7 +151,7 @@
     },
     {
         "username": "igor",
-        "name": "Igor dos Santos Montagner ",
+        "name": "Igor dos Santos Montagner",
         "role": "PhD Alumni, co-supervision (2017)",
         "work": "W-operator learning using linear models for both gray-level and binary inputs",
         "category": "alumni_phd",
@@ -161,7 +161,7 @@
     },
     {
         "username": "marta",
-        "name": "Marta M. Dornelles ",
+        "name": "Marta M. Dornelles",
         "role": "PhD Alumni (2015)",
         "work": "Construção e seleção de janelas na combinação de W-operadores",
         "category": "alumni_phd",
@@ -171,7 +171,7 @@
     },
     {
         "username": "vinicius",
-        "name": "Vinicius R. N. Santos ",
+        "name": "Vinicius R. N. Santos",
         "role": "PhD Alumni, co-supervision (2014)",
         "work": "Detecção e Classificação Automática de Interferências no Subsolo com GPR Utilizando Redes Neurais Artificiais (RNAs): Estudo no SCGR do IAG/USP",
         "category": "alumni_phd",
@@ -181,7 +181,7 @@
     },
     {
         "username": "andre",
-        "name": "André Rodrigo Sanches ",
+        "name": "André Rodrigo Sanches",
         "role": "MSc Alumni (2006)",
         "work": "",
         "category": "alumni_master",
@@ -191,7 +191,7 @@
     },
     {
         "username": "davi",
-        "name": "Davi Souto Grangeiro ",
+        "name": "Davi Souto Grangeiro",
         "role": "MSc Alumni (2015)",
         "work": "ExpressMath Online: um sistema web para o tratamento de dados de expressões matemáticas manuscritas",
         "category": "alumni_master",
@@ -201,7 +201,7 @@
     },
     {
         "username": "edwin",
-        "name": "Edwin Delgado Huaynalaya ",
+        "name": "Edwin Delgado Huaynalaya",
         "role": "MSc Alumni (2012)",
         "work": "Detecção de ovos de S. mansoni a partir da detecção de seus contornos (Project's home page)",
         "category": "alumni_master",
@@ -211,7 +211,7 @@
     },
     {
         "username": "felipe",
-        "name": "Felipe Breve Siola ",
+        "name": "Felipe Breve Siola",
         "role": "MSc Alumni (2014)",
         "work": "Transformações Hit-or-Miss para Imagens Tons de Cinza",
         "category": "alumni_master",
@@ -221,7 +221,7 @@
     },
     {
         "username": "leandro",
-        "name": "Leandro Ticlia de La Cruz ",
+        "name": "Leandro Ticlia de La Cruz",
         "role": "MSc Alumni (2015)",
         "work": "Quantificação de angiogênese em imagens de membranas corioalantóicas de embrião de galinha",
         "category": "alumni_master",
@@ -231,7 +231,7 @@
     },
     {
         "username": "luiz",
-        "name": "Luiz Felipe Franco Belussi ",
+        "name": "Luiz Felipe Franco Belussi",
         "role": "MSc Alumni (2012)",
         "work": "Detecção de QR codes em imagens com enquadramento arbitário\nSample images",
         "category": "alumni_master",
@@ -241,7 +241,7 @@
     },
     {
         "username": "marcelo",
-        "name": "Marcelo Valentim ",
+        "name": "Marcelo Valentim",
         "role": "MSc Alumni (2014)",
         "work": "Um estudo empírico sobre classificação de símbolos matemáticos manuscritos",
         "category": "alumni_master",
@@ -251,7 +251,7 @@
     },
     {
         "username": "mariela",
-        "name": "Mariela Atausinchi Fernandez ",
+        "name": "Mariela Atausinchi Fernandez",
         "role": "MSc Alumni (2017)",
         "work": "Classificação de imagens de plâncton usando múltiplas segmentações",
         "category": "alumni_master",
@@ -261,7 +261,7 @@
     },
     {
         "username": "ney",
-        "name": "Ney Barros Luz ",
+        "name": "Ney Barros Luz",
         "role": "MSc Alumni (2005)",
         "work": "",
         "category": "alumni_master",
@@ -271,7 +271,7 @@
     },
     {
         "username": "philipe",
-        "name": "Philipe Dalla Bernardina ",
+        "name": "Philipe Dalla Bernardina",
         "role": "MSc Alumni (2007)",
         "work": "PCA-tree: uma proposta para indexação multidimensional",
         "category": "alumni_master",
@@ -281,7 +281,7 @@
     },
     {
         "username": "willian",
-        "name": "Willian Y. Honda ",
+        "name": "Willian Y. Honda",
         "role": "MSc Alumni (2013)",
         "work": "Rotulação de símbolos matemáticos manuscritos via casamento de expressões",
         "category": "alumni_master",
@@ -290,8 +290,8 @@
         "year": 2013
     },
     {
-        "username": "adolpho-e-camila",
-        "name": "Adolpho da Costa Pacheco e Camila Pacheco Marques ",
+        "username": "adolpho",
+        "name": "Adolpho da Costa Pacheco",
         "role": "IC/TF Alumni (2005)",
         "work": "Combinação de Classificadores",
         "category": "alumni_undergrad",
@@ -300,8 +300,18 @@
         "year": 2005
     },
     {
-        "username": "ana-eduardo-fabio-leonardo",
-        "name": "Ana Paula Santos de Mello, Eduardo Yutaca Komatsu, Fábio Marcos Eiji Okuda e Leonardo Ka Wah Hing ",
+        "username": "camila-pacheco",
+        "name": "Camila Pacheco Marques",
+        "role": "IC/TF Alumni (2005)",
+        "work": "Combinação de Classificadores",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 40,
+        "year": 2005
+    },
+    {
+        "username": "eduardoo-yutaca",
+        "name": "Eduardo Yutaca Komatsu",
         "role": "IC/TF Alumni (2007)",
         "work": "Math-Picasso -- Segmentação e reconhecimento de caracteres em expressões matemáticas manuscritas",
         "category": "alumni_undergrad",
@@ -310,8 +320,38 @@
         "year": 2007
     },
     {
-        "username": "breno-e-ricardo",
-        "name": "Breno e Ricardo Bastos ",
+        "username": "ana-paula",
+        "name": "Ana Paula Santos de Mello",
+        "role": "IC/TF Alumni (2007)",
+        "work": "Math-Picasso -- Segmentação e reconhecimento de caracteres em expressões matemáticas manuscritas",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 40,
+        "year": 2007
+    },
+    {
+        "username": "fabio-marcos",
+        "name": "Fábio Marcos Eiji Okuda",
+        "role": "IC/TF Alumni (2007)",
+        "work": "Math-Picasso -- Segmentação e reconhecimento de caracteres em expressões matemáticas manuscritas",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 40,
+        "year": 2007
+    },
+    {
+        "username": "leonardo-ka",
+        "name": "Leonardo Ka Wah Hing ",
+        "role": "IC/TF Alumni (2007)",
+        "work": "Math-Picasso -- Segmentação e reconhecimento de caracteres em expressões matemáticas manuscritas",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 40,
+        "year": 2007
+    },
+    {
+        "username": "breno",
+        "name": "Breno",
         "role": "IC/TF Alumni (2009)",
         "work": "Reconhecimento Hierárquico de Caracteres",
         "category": "alumni_undergrad",
@@ -320,8 +360,28 @@
         "year": 2009
     },
     {
-        "username": "bruno-e-ricardo",
-        "name": "Bruno Ozahata e Ricardo Sider ",
+        "username": "ricardo-bastos",
+        "name": "Ricardo Bastos",
+        "role": "IC/TF Alumni (2009)",
+        "work": "Reconhecimento Hierárquico de Caracteres",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 40,
+        "year": 2009
+    },
+    {
+        "username": "bruno-ozahata",
+        "name": "Bruno Ozahata",
+        "role": "IC/TF Alumni (2009)",
+        "work": "Análise Estrutural de Expressões Matemáticas Manuscritas Online",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 40,
+        "year": 2009
+    },
+    {
+        "username": "ricardoi-sider",
+        "name": "Ricardo Sider",
         "role": "IC/TF Alumni (2009)",
         "work": "Análise Estrutural de Expressões Matemáticas Manuscritas Online",
         "category": "alumni_undergrad",
@@ -331,7 +391,7 @@
     },
     {
         "username": "bruno-perfetto",
-        "name": "Bruno Perfetto ",
+        "name": "Bruno Perfetto",
         "role": "IC/TF Alumni (2010)",
         "work": "",
         "category": "alumni_undergrad",
@@ -341,7 +401,7 @@
     },
     {
         "username": "cristiano",
-        "name": "Cristiano Garcia ",
+        "name": "Cristiano Garcia",
         "role": "IC/TF Alumni (2008)",
         "work": "Uma Abordagem Hierárquica para o Reconhecimento de Caracteres em Expressões Matemáticas Manuscritas",
         "category": "alumni_undergrad",
@@ -351,17 +411,17 @@
     },
     {
         "username": "danilo",
-        "name": "Danilo de Andrade Castilho ",
+        "name": "Danilo de Andrade Castilho",
         "role": "TF Alumni (2004)",
         "work": "Estágio",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2004
     },
     {
         "username": "eber",
-        "name": "Éber Saj Porcacchia ",
+        "name": "Éber Saj Porcacchia",
         "role": "IC/TF Alumni (2017)",
         "work": "Redes neurais multicamadas e convolucionais aplicadas à segmentação de vasos sanguíneos",
         "category": "alumni_undergrad",
@@ -370,58 +430,78 @@
         "year": 2017
     },
     {
-        "username": "eduardo-pedro-ricky",
-        "name": "Eduardo Gusmão Cáceres Pires, Pedro Henrique Simões de Oliveira e Ricky Ye Lun Chow ",
+        "username": "eduardo-gusmao",
+        "name": "Eduardo Gusmão Cáceres Pires",
         "role": "TF Alumni (2006)",
         "work": "Sistema Titanium de Reconhecimento de Escrita Online - SisTREO (Eduardo, Pedro, Ricky)",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
+        "year": 2006
+    },
+    {
+        "username": "pedro-henrique",
+        "name": "Pedro Henrique Simões de Oliveira",
+        "role": "TF Alumni (2006)",
+        "work": "Sistema Titanium de Reconhecimento de Escrita Online - SisTREO (Eduardo, Pedro, Ricky)",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 45,
+        "year": 2006
+    },
+    {
+        "username": "ricky-ye",
+        "name": "Ricky Ye Lun Chow",
+        "role": "TF Alumni (2006)",
+        "work": "Sistema Titanium de Reconhecimento de Escrita Online - SisTREO (Eduardo, Pedro, Ricky)",
+        "category": "alumni_undergrad",
+        "group": "Alumni",
+        "display_order": 45,
         "year": 2006
     },
     {
         "username": "elcio",
-        "name": "Elcio Koiti Nakashima ",
+        "name": "Elcio Koiti Nakashima",
         "role": "TF Alumni (2004)",
         "work": "Reconhecimento Automático de Placas de Veículos",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2004
     },
     {
         "username": "fabio",
-        "name": "Fábio Mazete Reaes ",
+        "name": "Fábio Mazete Reaes",
         "role": "TF Alumni (2006)",
         "work": "Reconhecimento de faces em imagens: projeto Beholder",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2006
     },
     {
         "username": "jefferson",
-        "name": "Jefferson Schoenfeld ",
+        "name": "Jefferson Schoenfeld",
         "role": "TF Alumni (2005)",
         "work": "Bagging e Boosting Aplicados ao Projeto de Operadores Morfológicos de Imagens",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2005
     },
     {
         "username": "keith",
-        "name": "Keith M. Takizawa ",
+        "name": "Keith M. Takizawa",
         "role": "TF Alumni (2003)",
         "work": "Modelagem Matemática de Célula a Combustível tipo PEM",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2003
     },
     {
         "username": "lilianne",
-        "name": "Lilianne Mariko I. Nakazono ",
+        "name": "Lilianne Mariko I. Nakazono",
         "role": "IC Alumni, co-supervision (2016)",
         "work": "Separação de estrelas e quasares em imagens multiespectrais",
         "category": "alumni_undergrad",
@@ -431,7 +511,7 @@
     },
     {
         "username": "luiz-henrique",
-        "name": "Luiz Henrique Mariano de Araújo ",
+        "name": "Luiz Henrique Mariano de Araújo",
         "role": "IC/TF Alumni (2002)",
         "work": "Uma ferramenta interativa gráfica para desenho de redes de regulação gênica",
         "category": "alumni_undergrad",
@@ -441,7 +521,7 @@
     },
     {
         "username": "rafael",
-        "name": "Rafael Reis da Silva ",
+        "name": "Rafael Reis da Silva",
         "role": "IC Alumni, co-supervision",
         "work": "Remoção de compasso usando combinações de operadores heurísticos e treinados automaticamente",
         "category": "alumni_undergrad",
@@ -451,42 +531,42 @@
     },
     {
         "username": "ricardo",
-        "name": "Ricardo de Cillo ",
+        "name": "Ricardo de Cillo",
         "role": "TF Alumni (2012)",
         "work": "Aplicação de análise morfológica para segmentação de páginas em imagens de documentos",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2012
     },
     {
         "username": "rodrigo",
-        "name": "Rodrigo Rueda ",
+        "name": "Rodrigo Rueda",
         "role": "TF Alumni (2007)",
         "work": " Ferramenta para Segmentação Interativa de Imagens",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2007
     },
     {
         "username": "ulisses",
-        "name": "Ulisses de Castro Buonanni ",
+        "name": "Ulisses de Castro Buonanni",
         "role": "TF Alumni (2005)",
         "work": "Estágio",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2005
     },
     {
         "username": "walter",
-        "name": "Walter Souza ",
+        "name": "Walter Souza",
         "role": "TF Alumni (2011)",
         "work": "Soluções Eficientes para o Cubo Mágico",
         "category": "alumni_undergrad",
         "group": "Alumni",
-        "display_order": 40,
+        "display_order": 45,
         "year": 2011
     }
 ]

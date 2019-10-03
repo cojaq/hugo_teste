@@ -70,6 +70,7 @@ social:
 email: ""
 
 #Value used to order authors list
+# pos-doc: 10, PhD: 20, MSc: 30, IC: 40, TF: 45 
 display_order: {author['display_order']} 
   
 # Organizational groups that you belong to (for People widget)

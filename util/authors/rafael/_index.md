@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Rafael Reis da Silva 
+name: Rafael Reis da Silva
 
 # Username (this should match the folder name)
 authors:
@@ -68,6 +68,7 @@ social:
 email: ""
 
 #Value used to order authors list
+# pos-doc: 10, PhD: 20, MSc: 30, IC: 40, TF: 45 
 display_order: 40 
   
 # Organizational groups that you belong to (for People widget)
@@ -77,7 +78,7 @@ user_groups:
 - Alumni
 ---
 
-Rafael Reis da Silva  is a researcher of machine learning departament at the USP ML labs...
+Rafael Reis da Silva is a researcher of machine learning departament at the USP ML labs...
 
 ## What is Lorem Ipsum?
 
