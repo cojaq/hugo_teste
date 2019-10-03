@@ -26,13 +26,7 @@
 
   {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
 
-  {{ range $query }}
-  {{ $new_order := .Params.year }}
-    {{ $.Scratch.Add "enriched" (slice (dict "page" . "new_order" $new_order)) }}
-  {{ end }}
-
-  {{/* {{ range $query.ByParam "display_order" }} */}}
-  {{ range sort ($.Scratch.Get "enriched") ".new_order" "desc" }}
+  {{ range $query.ByParam "display_order" }}
 
   {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}

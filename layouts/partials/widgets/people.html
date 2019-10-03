@@ -15,29 +15,33 @@
   </div>
   {{ end }}
 
+  {{ range site.Pages }}
+  {{ range .Params.author }}
+  {{ println . }}
+  {{ end }}
+  {{ $new_order := .Params.display_order }}
+    {{ $.Scratch.Add "enriched" (slice (dict "page" . "new_order" $new_order)) }}
+  {{ end }}
+
   {{ range $page.Params.user_groups }}
 
-  {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
+  {{ $query := where ($.Scratch.Get "enriched") ".page.Params.user_groups" "intersect" (slice .) }}
 	  {{ if $query }}
     <div class="col-md-12">
       <h2 class="mb-4">{{ . | markdownify }}</h2>
     </div>
 		{{ end }}
 
-  {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
-
-  {{ range $query }}
-  {{ $new_order := .Params.year }}
-    {{ $.Scratch.Add "enriched" (slice (dict "page" . "new_order" $new_order)) }}
-  {{ end }}
+  {{ $query := where ($.Scratch.Get "enriched") ".page.Params.user_groups" "intersect" (slice .) }}
 
   {{/* {{ range $query.ByParam "display_order" }} */}}
-  {{ range sort ($.Scratch.Get "enriched") ".new_order" "desc" }}
+  {{/* {{ range sort ($.Scratch.Get "enriched") ".new_order" "desc" }} */}}
+  {{ range sort $query ".new_order"}}
 
   {{ $avatar := (.page.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}
   {{ $link := "" }}
-  {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Split .Path).Dir)) }}
+  {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Split .page.Path).Dir)) }}
     {{ $link = .RelPermalink }}
   {{ end }}
   <div class="col-12 col-sm-auto people-person">
