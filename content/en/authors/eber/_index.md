@@ -11,7 +11,9 @@ superuser: false
 
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
-role: IC Alumni (2017)
+role: IC/TF Alumni (2017)
+# Year (started year or finished year, in case alumni)
+year: 2017
 
 # Organizations/Affiliations
 organizations:
@@ -66,7 +68,7 @@ social:
 email: ""
 
 #Value used to order authors list
-display_order: 50 
+display_order: 40 
   
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  

@@ -15,33 +15,23 @@
   </div>
   {{ end }}
 
-  {{ range site.Pages }}
-  {{ range .Params.author }}
-  {{ println . }}
-  {{ end }}
-  {{ $new_order := .Params.display_order }}
-    {{ $.Scratch.Add "enriched" (slice (dict "page" . "new_order" $new_order)) }}
-  {{ end }}
-
   {{ range $page.Params.user_groups }}
 
-  {{ $query := where ($.Scratch.Get "enriched") ".page.Params.user_groups" "intersect" (slice .) }}
+  {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
 	  {{ if $query }}
     <div class="col-md-12">
       <h2 class="mb-4">{{ . | markdownify }}</h2>
     </div>
 		{{ end }}
 
-  {{ $query := where ($.Scratch.Get "enriched") ".page.Params.user_groups" "intersect" (slice .) }}
+  {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
 
-  {{/* {{ range $query.ByParam "display_order" }} */}}
-  {{/* {{ range sort ($.Scratch.Get "enriched") ".new_order" "desc" }} */}}
-  {{ range sort $query ".new_order"}}
+  {{ range $query.ByParam "display_order" }}
 
-  {{ $avatar := (.page.Resources.ByType "image").GetMatch "*avatar*" }}
+  {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}
   {{ $link := "" }}
-  {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Split .page.Path).Dir)) }}
+  {{ with site.GetPage (printf "/authors/%s" (path.Base (path.Split .Path).Dir)) }}
     {{ $link = .RelPermalink }}
   {{ end }}
   <div class="col-12 col-sm-auto people-person">
@@ -57,9 +47,9 @@
     {{ end }}
 
     <div class="portrait-title">
-      <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .page.Params.name }}{{if $link}}</a>{{end}}</h2>
-      {{ with .page.Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
-      {{ with .page.Params.interests }}<p class="people-interests">{{ delimit . ", " | markdownify | emojify }}</p>{{ end }}
+      <h2>{{with $link}}<a href="{{.}}">{{end}}{{ .Params.name }}{{if $link}}</a>{{end}}</h2>
+      {{ with .Params.role }}<h3>{{ . | markdownify | emojify }}</h3>{{ end }}
+      {{ with .Params.interests }}<p class="people-interests">{{ delimit . ", " | markdownify | emojify }}</p>{{ end }}
     </div>
   </div>
 

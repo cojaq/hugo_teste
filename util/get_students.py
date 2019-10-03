@@ -22,12 +22,13 @@ def process(s, category):
     username = no_accents(name.split()[0]).lower()
     display_order = 10
 
+    try:
+        year = int(re.findall(r'\d{4}', role)[-1]) 
+    except:
+        year = 2000
+
     if 'alumni' in category:
         group = 'Alumni'
-        try:
-            year = re.findall(r'\d{4}', role)[-1] 
-        except:
-            year = '0000'
     else:
         group = 'Researchers'
 
@@ -52,7 +53,8 @@ def process(s, category):
         display_order = 50
 
     dd = {'username' : username, 'name':name, 'role': role, 'work':work,
-          'category':category, 'group': group, 'display_order': display_order}
+            'category':category, 'group': group, 'display_order': display_order,
+            'year': year}
 
     return dd
 

@@ -1,19 +1,19 @@
 ---
 # Display name
-name: Fábio Mazete Reaes 
+name: Luiz Henrique Mariano de Araújo 
 
 # Username (this should match the folder name)
 authors:
-- fabio
+- luiz-henrique
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
-role: TF Alumni (2006)
+role: IC/TF Alumni (2002)
 # Year (started year or finished year, in case alumni)
-year: 2006
+year: 2002
 
 # Organizations/Affiliations
 organizations:
@@ -77,7 +77,7 @@ user_groups:
 - Alumni
 ---
 
-Fábio Mazete Reaes  is a researcher of machine learning departament at the USP ML labs...
+Luiz Henrique Mariano de Araújo  is a researcher of machine learning departament at the USP ML labs...
 
 ## What is Lorem Ipsum?
 

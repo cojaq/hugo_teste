@@ -14,6 +14,8 @@ superuser: false
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
 role: {author['role']}
+# Year (started year or finished year, in case alumni)
+year: {author['year']}
 
 # Organizations/Affiliations
 organizations:

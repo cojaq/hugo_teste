@@ -12,6 +12,8 @@ superuser: false
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
 role: MSc Student
+# Year (started year or finished year, in case alumni)
+year: 2017
 
 # Organizations/Affiliations
 organizations:
@@ -66,7 +68,7 @@ social:
 email: ""
 
 #Value used to order authors list
-display_order: 30 
+display_order: 50 
   
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
