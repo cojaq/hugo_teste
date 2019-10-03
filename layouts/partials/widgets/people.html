@@ -25,7 +25,8 @@
 		{{ end }}
 
   {{ $query := where (where site.Pages "Section" "authors") ".Params.user_groups" "intersect" (slice .) }}
-  {{ range $query }}
+
+  {{ range $query.ByParam "display_order" }}
 
   {{ $avatar := (.Resources.ByType "image").GetMatch "*avatar*" }}
   {{/* Get link to user's profile page. */}}

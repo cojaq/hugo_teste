@@ -5,7 +5,7 @@ summary: Learn more
 weight: 2
 
 # Page metadata.
-title: Overview
+title: Descrição
 date: "2018-09-09T00:00:00Z"
 lastmod: "2018-09-09T00:00:00Z"
 draft: false  # Is this a draft? true/false
@@ -18,7 +18,7 @@ editable: false
 # - weight: Position of link in menu.
 menu:
   symbol_detection:
-    name: Overview
+    name: Descrição
     weight: 1
 ---
 

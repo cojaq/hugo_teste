@@ -1,11 +1,16 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Image_transformation"
-summary: ""
+title: "Image Transformation"
+summary: "Smart transformations"
 authors: []
-tags: []
-categories: []
+tags: 
+ - High risk transform
+ - Image Analysis
+ - Image process
+categories: 
+ - Image Analysis
+ - Image Process
 date: 2019-09-08T13:09:50-03:00
 
 # Optional external URL for project (replaces project detail page).
@@ -16,7 +21,7 @@ external_link: ""
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
   caption: ""
-  focal_point: ""
+  focal_point: "smart"
   preview_only: false
 
 # Custom links (optional).

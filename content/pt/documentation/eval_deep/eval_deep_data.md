@@ -1,8 +1,8 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Eval_deep"
-linktitle: "Eval_deep"
+title: "Dados"
+linktitle: "Dados"
 summary:
 date: 2019-09-08T16:17:24-03:00
 lastmod: 2019-09-08T16:17:24-03:00
@@ -18,7 +18,7 @@ editable: false
 # - weight: Position of link in menu.
 menu:
   eval_deep:
-    name: Data
-    parent: Overview
+    name: Dados
+    parent: Descrição
     weight: 3
 ---
