@@ -20,12 +20,12 @@
 
 		{{ if in .Params.user_groups "Alumni" }} 
 		  {{ $year := sub 2050 (int .Params.year) }} 
-	    {{ $order := mul (int .Params.display_order) 10000 }}
+	    {{ $order := mul .Params.display_order 10000 }}
       {{ $score := add (int $order) (int $year) }}
       {{ $.Scratch.Add "enriched" (slice (dict "page" . "score" $score)) }}
 		{{ else }}
 	    {{ $year := .Params.year }}
-	    {{ $order := mul (int .Params.display_order) 10000 }}
+	    {{ $order := mul .Params.display_order 10000 }}
       {{ $score := add (int $order) (int $year) }}
       {{ $.Scratch.Add "enriched" (slice (dict "page" . "score" $score)) }}
 		{{ end }}
