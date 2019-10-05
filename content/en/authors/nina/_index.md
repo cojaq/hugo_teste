@@ -65,7 +65,7 @@ social:
 email: ""
 display_order: 10
 year: 2000
-  
+
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
 # ["Professors", "Researchers", "Project Staff", "Visitors", "Alumni"] 
