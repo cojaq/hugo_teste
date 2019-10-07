@@ -105,15 +105,13 @@ def generate_json(html):
 
     return list_of_students
 
-
-if __name__ == '__main__':
-
-    if not os.path.exists('students.json'):
+def load_json(student_file):
+    if not os.path.exists(student_file):
         list_of_students = generate_json("supervision.html")
-        with open('students.json', 'w', encoding='utf8') as json_file:
+        with open(student_file, 'w', encoding='utf8') as json_file:
             json.dump(list_of_students, json_file, indent=4, ensure_ascii=False)
 
-    with open('students.json', encoding='utf-8-sig') as json_file:
+    with open(student_file, encoding='utf-8-sig') as json_file:
         json_data = json.loads(json_file.read())
 
     c = Counter([i['username'] for i in json_data])
@@ -131,7 +129,9 @@ if __name__ == '__main__':
         print('Resolva os conflitos no arquivos students.json antes de continuar')
         exit()
 
+    return json_data
 
+def write_authors(json_data):
     for student in json_data:
         name = student['name']
         username = student['username']
@@ -147,6 +147,13 @@ if __name__ == '__main__':
         user_file = open(filename,'w')
         user_file.write(template)
         user_file.close()
+
+if __name__ == '__main__':
+
+    json_data = load_json('student.json')
+
+    write_authors(json_data)
+
 
 else:
     pass

@@ -1,8 +1,8 @@
 ---
 title: "Deep Learning Inverse Multidimensional Projections"
 date: 2019-01-01
-publishDate: 2019-09-28T02:49:30.789388Z
-authors: ["Mateus Espadoto", "Francisco Caio Maia Rodrigues", nina, "Roberto Hirata Jr.", "Alexandru C. Telea"]
+publishDate: 2019-10-07T17:53:53.466168Z
+authors: ["Mateus Espadoto", "Francisco Caio Maia Rodrigues", "Nina S. T. Hirata", "Roberto Hirata Jr.", "Alexandru C. Telea"]
 publication_types: ["1"]
 abstract: ""
 featured: false
