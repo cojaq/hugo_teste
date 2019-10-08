@@ -4,7 +4,7 @@ name: Eduardo Yutaca Komatsu
 
 # Username (this should match the folder name)
 authors:
-- eduardoo-yutaca
+- eduardo-yutaca
 
 # Is this the primary user of the site?
 superuser: false
@@ -76,6 +76,7 @@ display_order: 40
 # ["Professors", "Researchers", "Project Staff", "Visitors", "Alumni"] 
 user_groups:
 - Alumni
+
 ---
 
 Eduardo Yutaca Komatsu is a researcher of machine learning departament at the USP ML labs...
