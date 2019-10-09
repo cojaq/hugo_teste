@@ -63,14 +63,13 @@ social:
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
-display_order: 10
-year: 2000
+weight: 5
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
-# ["Professors", "Researchers", "Project Staff", "Visitors", "Alumni"] 
+# ["Coordinator", "Associate Researchers", "Students", "Collaborators"]
 user_groups:
-- Professors
+- Coordinator
 ---
 
 Nina Hirata is a professor of machine learning departament at the USP ML labs...

@@ -52,12 +52,13 @@ editable: false  # Allow visitors to edit the page? Supported by the Page, Post,
 
 ########### Example below #############################
 
-title: "An example preprint / working paper"
+title: "Template publication"
 authors:
 - admin
 date: "2019-04-07T00:00:00Z"
 doi: ""
 
+draft: true
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2017-01-01T00:00:00Z"
@@ -96,7 +97,7 @@ url_video: '#'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/s9CC2SKySJM)'
+  caption: Imagem de [**Alexas_Fotos**](https://pixabay.com/pt/users/Alexas_Fotos-686414/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3094035) por [**Pixabay**](https://pixabay.com/pt/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3094035)
   focal_point: ""
   preview_only: false
 

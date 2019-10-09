@@ -12,8 +12,6 @@ superuser: false
 # Role/position
 # ["Associate Professor", "Post-Doctoral Researcher", "PhD Student", "Master Student", "Undergrad Student"] 
 role: Post-Doctoral Alumni (2018)
-# Year (started year or finished year, in case alumni)
-year: 2018
 
 # Organizations/Affiliations
 organizations:
@@ -24,10 +22,10 @@ organizations:
 bio: My research interests include ....
 
 interests:
-- Machine Learning ???
-- Deep Neural Networks ???
-- Image Processing and Analysis ???
-- Pattern Recognition ???
+- Computer Vision
+- Machine Learning / Deep Learning
+- Handwriting Recognition
+- Image Operators Learning
 
 education:
   courses:
@@ -68,14 +66,12 @@ social:
 email: ""
 
 #Value used to order authors list
-# pos-doc: 10, PhD: 20, MSc: 30, IC: 40, TF: 45 
-display_order: 10 
+weight: 10
   
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.  
-# ["Professors", "Researchers", "Project Staff", "Visitors", "Alumni"] 
 user_groups:
-- Alumni
+- Associate Researchers
 ---
 
 Frank D. Julca-Aguilar is a researcher of machine learning departament at the USP ML labs...

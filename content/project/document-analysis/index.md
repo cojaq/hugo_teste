@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Document Image Analysis"
-summary: "teste de projeto"
+summary: "Qual será o nome do projeto"
 authors:
  - ana-lucia
  - frank
@@ -25,7 +25,7 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: ""
+  caption: "Imagem de Tumisu por Pixabay"
   focal_point: "smart"
   preview_only: false
 

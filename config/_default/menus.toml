@@ -10,7 +10,7 @@
 
 [[main]]
   name = "Data + Code"
-  url = "documentation/"
+  url = "datacode/"
   weight = 20
 
 [[main]]

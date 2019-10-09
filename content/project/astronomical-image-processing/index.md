@@ -20,7 +20,7 @@ external_link: ""
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "for computer science, sky is the next border"
+  caption: "Imagem de Kyoung-Sik Choi por Pixabay"
   focal_point: "smart"
   preview_only: false
 

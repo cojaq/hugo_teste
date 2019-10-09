@@ -3,14 +3,13 @@
 
 title: "Image Transformation"
 summary: "Smart transformations"
-authors: []
+authors: ["admin"]
 tags: 
  - High risk transform
  - Image Analysis
  - Image process
 categories: 
- - Image Analysis
- - Image Process
+ - Image Transformation
 date: 2019-09-08T13:09:50-03:00
 
 # Optional external URL for project (replaces project detail page).
