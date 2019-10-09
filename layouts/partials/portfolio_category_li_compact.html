@@ -1,5 +1,5 @@
 {{ $item := .item }}
-{{ $js_category_classes := delimit (apply (apply $item.Params.categories "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
+{{ $js_category_classes := delimit (apply (apply ($item.Params.categories | append "All" ) "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
 
 <div class="col-12 isotope-item {{ $js_category_classes | safeHTMLAttr }}">
   {{ partial "li_compact" $item }}

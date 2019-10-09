@@ -4,15 +4,18 @@
 title: "Document Image Analysis"
 summary: "teste de projeto"
 authors:
- - admin
+ - ana-lucia
+ - frank
  - nina
 
 tags: 
  - structured data analysis
  - high condensed info extraction 
  - low latency document generatos
+
 categories: 
- - Deep Learning
+ - Document Images
+
 date: 2019-09-08T02:10:01-03:00
 
 # Optional external URL for project (replaces project detail page).

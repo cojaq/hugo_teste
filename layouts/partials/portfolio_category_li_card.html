@@ -17,7 +17,7 @@
 {{ end }}
 
 {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
-{{ $js_category_classes := delimit (apply (apply $item.Params.categories "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
+{{ $js_category_classes := delimit (apply (apply ($item.Params.categories | append "All") "replace" "." " " "-") "printf" "js-id-%s" ".") " " }}
 
 <div class="project-card project-item isotope-item {{ $js_category_classes | safeHTMLAttr }}">
   <div class="card">

@@ -1,13 +1,15 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Object Detection"
-summary: "Object detection in natural images"
+title: "Symbol Detection"
+summary: "Symbol detection in graphics"
 authors: 
- - tiago
+ - sergio
 tags: []
-categories: []
+#categories: ["Image-to-Image Transformation", "Object Detection", "Astronomical Images", "Document Images", "Projection Learning"]
+categories: ["Object Detection"]
 date: 2019-09-08T13:09:40-03:00
+#profile: false
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -40,12 +42,6 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
-
-
-## QR code detection in natural images
-See An Evaluation of Deep Learning Techniques for QR Code Detection (by L. Blanger, N.S.T. Hirata, to appear in ICIP2019). Source code is available in our Data+Code page. In brief we will release the annotated dataset used to evaluate some deep network models. We also compare the performance of deep models to the performance of an earlier model based on the Viola-Jones object detection framework (code FastQR)
-
-
 
 ## Symbol detection in graphics
 Detecting symbols in handwritten graphics is challenging due to the variations of handwriting but also the variety and diveristy of symbols types. An evaluation of Faster R-CNN for detecting symbols in handwritten mathematical expressions and flowcharts is described in Symbol detection in online handwritten graphics using Faster R-CNN (by F.D. Julca-Aguilar, N.S.T. Hirata, DAS2018). Source code is available in our Data+Code page.
