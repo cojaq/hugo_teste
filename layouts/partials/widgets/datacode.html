@@ -1,0 +1,56 @@
+{{/* Datacode Widget */}}
+
+{{/* Initialise */}}
+{{ $ := .root }}
+{{ $st := .page }}
+
+{{ $headless := (index ($.Site.GetPage "/projects").Resources 0) }}
+
+{{ $categories := where $headless.Params.content.filter_button "category" "ne" "All" }}
+
+{{ $projects :=  where $.Site.Pages "Type" "project" }}
+
+{{ $taxonomy := "categories" }}
+			 
+{{ $pr := where site.RegularPages "Type" "project" }}
+{{ $projs := where (where $pr ".Params.url_dataset" "ne" nil) ".Params.url_dataset" "ne" ""}}
+{{ $projs := $projs | union (where (where $pr ".Params.url_data" "ne" nil) ".Params.url_data" "ne" "") }}
+{{ $projs := $projs | union (where (where $pr ".Params.url_code" "ne" nil) ".Params.url_code" "ne" "") }}
+{{ $projs := $projs | union (where (where $pr ".Params.url_video" "ne" nil) ".Params.url_video" "ne" "") }}
+
+{{ $pubs := where site.RegularPages "Type" "publication" }}
+{{ $publications := where $pubs ".Params.url_dataset" "ne" nil }}
+{{ $publications := $publications | union (where $pubs ".Params.url_data" "ne" nil ) }}
+{{ $publications := $publications | union (where $pubs ".Params.url_github" "ne" nil ) }}
+{{ $publications := $publications | union (where $pubs ".Params.url_code" "ne" nil ) }}
+
+{{ $query := $projs | union $publications }}
+
+{{/* Sort */}}
+	     <script>console.log({{ $query }});</script>
+
+<div class="row">
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }} Datasets </h1>
+		{{ with $st.Params.subtitle }}  <p>{{ . | markdownify | emojify }}</p>{{ end }}
+Publications and projects with associated files
+  </div>
+  <div class="col-12 col-lg-8">
+
+    {{ with $st.Content }}{{ . }}{{ end }}
+
+    {{ range $post := $query }}
+        {{ partial "li_list" . }}
+		{{/*      {{ if eq $st.Params.design.view 1 }}
+        {{ partial "li_list" . }}
+      {{ else if eq $st.Params.design.view 3 }}
+        {{ partial "li_card" . }}
+      {{ else if eq $st.Params.design.view 4 }}
+        {{ partial "li_citation" . }}
+      {{ else }}
+        {{ partial "li_compact" . }}
+				{{ end }} */}}
+    {{end}}
+
+  </div>
+</div>
