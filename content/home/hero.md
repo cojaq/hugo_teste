@@ -37,7 +37,7 @@ hero_media = "background_imageu.jpg"
 
 to the **ImageU project site**.
 
-Research for image understanding and more
+Image understanding research _and more_
 
 <span style="text-shadow: none;"><a class="github-button" href="https://github.com/imageu" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
 
