@@ -4,14 +4,15 @@
 {{ $ := .root }}
 {{ $st := .page }}
 
+{{ $filter_params := $st.Params.filter_params }}
+
 {{ $headless := (index ($.Site.GetPage "/projects").Resources 0) }}
 
 {{ $categories := where $headless.Params.content.filter_button "category" "ne" "All" }}
 
 {{ $projects :=  where $.Site.Pages "Type" "project" }}
 
-{{ $taxonomy := "categories" }}
-			 
+{{ $teste := where (where site.RegularPages "Type" "project") ".Params" "in" "$filter_params" }}
 {{ $pr := where site.RegularPages "Type" "project" }}
 {{ $projs := where (where $pr ".Params.url_dataset" "ne" nil) ".Params.url_dataset" "ne" ""}}
 {{ $projs := $projs | union (where (where $pr ".Params.url_data" "ne" nil) ".Params.url_data" "ne" "") }}
@@ -24,32 +25,29 @@
 {{ $publications := $publications | union (where $pubs ".Params.url_github" "ne" nil ) }}
 {{ $publications := $publications | union (where $pubs ".Params.url_code" "ne" nil ) }}
 
-{{ $query := $projs | union $publications }}
+{{ $query := $publications | union $projs }}
 
 {{/* Sort */}}
-	     <script>console.log({{ $query }});</script>
+	     <script>console.log({{ $teste }});</script>
 
 <div class="row">
   <div class="col-12 col-lg-4 section-heading">
-    <h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }} Datasets </h1>
+    <h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }}</h1>
 		{{ with $st.Params.subtitle }}  <p>{{ . | markdownify | emojify }}</p>{{ end }}
-Publications and projects with associated files
+		<br>
+		<p> <i class="fas fa-project-diagram pub-icon" aria-hidden="true"></i> Projects </p> 
+		<p> <i class="far fa-file-alt pub-icon" aria-hidden="true"></i> Publications </p>
   </div>
   <div class="col-12 col-lg-8">
 
     {{ with $st.Content }}{{ . }}{{ end }}
 
     {{ range $post := $query }}
-        {{ partial "li_list" . }}
-		{{/*      {{ if eq $st.Params.design.view 1 }}
-        {{ partial "li_list" . }}
-      {{ else if eq $st.Params.design.view 3 }}
-        {{ partial "li_card" . }}
-      {{ else if eq $st.Params.design.view 4 }}
-        {{ partial "li_citation" . }}
-      {{ else }}
-        {{ partial "li_compact" . }}
-				{{ end }} */}}
+
+
+
+        {{ partial "datacode_li_list" . }}
+
     {{end}}
 
   </div>

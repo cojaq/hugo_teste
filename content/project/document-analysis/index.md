@@ -4,7 +4,7 @@
 title: "Document Image Analysis"
 summary: "Qual será o nome do projeto"
 authors:
- - ana-lucia
+ - ana-maia
  - frank
  - nina
 
@@ -14,7 +14,7 @@ tags:
  - low latency document generatos
 
 categories: 
- - Document Images
+#- Document Images
 
 date: 2019-09-08T02:10:01-03:00
 
