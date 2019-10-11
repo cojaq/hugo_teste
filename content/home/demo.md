@@ -6,10 +6,9 @@
 widget = "blank"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 10  # Order that this section will appear.
+weight = 20  # Order that this section will appear.
 
-title = "Machine learning and image"
-subtitle = "Research for image understanding and more"
+title = "About"
 
 [design]
   # Choose how many columns the section has. Valid values: 1 or 2.
@@ -29,11 +28,11 @@ subtitle = "Research for image understanding and more"
   # gradient_end = "SkyBlue"
   
   # Background image.
-  image = "headers/background_05.png"  # Name of image in `static/img/`.
-  image_darken = 0.6  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
+  #image = "headers/background_imageu.jpg"  # Name of image in `static/img/`.
+  #image_darken = 0.2  # Darken the image? Range 0-1 where 0 is transparent and 1 is opaque.
 
   # Text color (true=light or false=dark).
-  text_color_light = true
+  text_color_light = false
 
 [design.spacing]
   # Customize the section spacing. Order is top, right, bottom, left.
@@ -47,35 +46,4 @@ subtitle = "Research for image understanding and more"
  css_class = ""
 +++
 
-<script>
-   // code snipet from stackoverflow
-   function getWeekNumber(d) {
-    // Copy date so don't modify original
-    d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
-    // Set to nearest Thursday: current date + 4 - current day number
-    // Make Sunday's day number 7
-    d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
-    // Get first day of year
-    var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
-    // Calculate full weeks to nearest Thursday
-    var weekNo = Math.ceil(( ( (d - yearStart) / 86400000) + 1)/7);
-    // Return array of year and week number
-    return [d.getUTCFullYear(), weekNo];
-}
-   function renameBackground(d){
-      var totalNumberOfFigures = 5
-      // var result = getWeekNumber(d) 
-      var result = [d.getHours(), d.getMinutes()];
-      var fnumber = result[1] % totalNumberOfFigures
-      //leading zeros
-      var fnumber = (fnumber <= 9) ? ("0" + fnumber) : (fnumber)
-      var bgElement = document.getElementById("demo").style["background-image"] 
-      var newStr = bgElement.replace(/background_[0-9][0-9].png/g, "background_"+ fnumber +".png")
-      document.getElementById("demo").style.backgroundImage = newStr
-   };
-   renameBackground(new Date());
-</script>
-
-Welcome to the **ImageU lab site** with Academic Thema.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+A central goal in the field of Computer Vision is image understanding. In general, appearance cues are used to detect components of interest and then spatial and hierarchical relations among these components are used to "describe" the image content at the semantic level of interest. Current deep models have reached a stage of evolution in which they are able to learn and transfer low level features from one domain to another. However, structural information of images such as spatial and hierarchical relations between constituent components are still explicitly modeled using case specific details. This makes models harder to be understood, useful only for few specific applications, and implications on training data preparation effort is still unclear. The aim of this project is the development of a structure-aware-semantics-unaware deep model, with abilities to learn and encode structural information regardless of the semantic level of image components. This should impact model understandability (as structural information would be more explicitly encoded) and training data requirements (as transfer learning would be possible). Theoretical studies, development of visualization strategies and new deep models, and experimentation with respect to diverse computer vision tasks are planned. (AU)
