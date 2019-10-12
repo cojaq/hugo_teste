@@ -27,8 +27,8 @@ subtitle = ""
     abstract = ""
   
   [[content.filter_button]]
-    name = "Image-to-Image Transformation"
-    category = "Image Transformation"
+    name = "Image Transformation"
+    category = "Image-to-Image Transformation"
     description = "orem ipsum iaculis blandit libero senectus erat ultricies, ultrices aptent conubia duis morbi habitant sociosqu ac, praesent bibendum fusce condimentum auctor tristique. venenatis platea faucibus iaculis conubia gravida purus luctus pulvinar cras, aliquam cras fames quisque odio nisi nibh ultricies justo curabitur, ligula aliquet est sodales tristique semper tempus purus. himenaeos integer venenatis facilisis ar"
   
   [[content.filter_button]]

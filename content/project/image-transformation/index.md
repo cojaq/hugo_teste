@@ -9,7 +9,7 @@ tags:
  - Image Analysis
  - Image process
 categories: 
- - Image Transformation
+ - image-to-image Transformation
 date: 2019-09-08T13:09:50-03:00
 
 # Optional external URL for project (replaces project detail page).
