@@ -7,6 +7,5 @@ weight = 80  # Order that this section will appear.
 title = "Datasets"
 subtitle = "Projects and publications with associated files"
 
-#filter_params = ["url_code", "url_github", "url_data", "url_dataset"]
-filter_params = ["url_video"]
+filter_params = ["url_code", "url_github", "url_data", "url_dataset"]
 +++

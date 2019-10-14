@@ -10,8 +10,6 @@
 
 {{ $categories := where $headless.Params.content.filter_button "category" "ne" "All" }}
 
-{{ $projects :=  where $.Site.Pages "Type" "project" }}
-
 {{ $pr := where site.RegularPages "Type" "project" }}
 {{/* filter projects pages */}}
 {{ if (len $filter_params) ge 1 }}
@@ -38,6 +36,16 @@
 
 {{ $projs := ($.Scratch.Get "projs") }}
 {{ $publications := ($.Scratch.Get "publications") }}
+
+ {{ range $category := $categories }}
+    {{ $p := where $projs "Params.categories" "intersect" (slice $category.category) }}
+    <script>console.log({{ $p }});</script>
+    {{ range $projs }}
+    <script>console.log({{ .Params.categories }});</script>
+    {{ end }}
+  {{ end }}
+
+
 
 {{ $query := $publications | union $projs }}
 
