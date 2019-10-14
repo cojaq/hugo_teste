@@ -14,6 +14,24 @@
 
 {{ $teste := where (where site.RegularPages "Type" "project") ".Params" "in" "$filter_params" }}
 {{ $pr := where site.RegularPages "Type" "project" }}
+
+{{ if (len $filter_params) gt 1 }}
+	{{ $projs := where (where $pr (printf ".Params.%s" (first 1 $filter_params)) "ne" nil) (printf ".Params.%s" (first 1 $filter_params)) "ne" ""}}
+	{{ $.Scratch.Set "projs" $projs}}
+	{{ range (after 1 $filter_params) }}
+		{{ $.Scratch.Set "projs" ($.Scratch.Get "projs" | union (where (where $pr (printf ".Params.%s" .) "ne" nil) (printf ".Params.%s" .) "ne" "")) }}
+	     <script>console.log({{ . }});</script>
+	{{ end }}
+{{ else if (len $filter_params) eq 1 }}
+{{ $projs := where (where $pr (printf ".Params.%s" (first 1 $teste)) "ne" nil) (printf ".Params.%s" (first 1 $teste)) "ne" ""}}
+
+	{{ .Scratch.add "projs" $projs }}
+{{ else }}
+	     <script>console.log({{ "teste3" }});</script>
+	{{ $projs := "" }}
+{{ end }}
+	     <script>console.log({{ (index ($.Scratch.Get "projs") 0) }});</script>
+
 {{ $projs := where (where $pr ".Params.url_dataset" "ne" nil) ".Params.url_dataset" "ne" ""}}
 {{ $projs := $projs | union (where (where $pr ".Params.url_data" "ne" nil) ".Params.url_data" "ne" "") }}
 {{ $projs := $projs | union (where (where $pr ".Params.url_code" "ne" nil) ".Params.url_code" "ne" "") }}
@@ -28,7 +46,6 @@
 {{ $query := $publications | union $projs }}
 
 {{/* Sort */}}
-	     <script>console.log({{ $teste }});</script>
 <style>
   h3.article.title {
     color: black;
@@ -48,8 +65,6 @@
     {{ with $st.Content }}{{ . }}{{ end }}
 
     {{ range $post := $query }}
-
-
 
         {{ partial "datacode_li_list" . }}
 
