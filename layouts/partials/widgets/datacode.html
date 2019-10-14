@@ -12,36 +12,32 @@
 
 {{ $projects :=  where $.Site.Pages "Type" "project" }}
 
-{{ $teste := where (where site.RegularPages "Type" "project") ".Params" "in" "$filter_params" }}
 {{ $pr := where site.RegularPages "Type" "project" }}
-
-{{ if (len $filter_params) gt 1 }}
-	{{ $projs := where (where $pr (printf ".Params.%s" (first 1 $filter_params)) "ne" nil) (printf ".Params.%s" (first 1 $filter_params)) "ne" ""}}
+{{/* filter projects pages */}}
+{{ if (len $filter_params) ge 1 }}
+	{{ $projs := where (where $pr (printf ".Params.%s" (index $filter_params 0)) "ne" nil) (printf ".Params.%s" (index $filter_params 0)) "ne" ""}}
 	{{ $.Scratch.Set "projs" $projs}}
 	{{ range (after 1 $filter_params) }}
 		{{ $.Scratch.Set "projs" ($.Scratch.Get "projs" | union (where (where $pr (printf ".Params.%s" .) "ne" nil) (printf ".Params.%s" .) "ne" "")) }}
-	     <script>console.log({{ . }});</script>
 	{{ end }}
-{{ else if (len $filter_params) eq 1 }}
-{{ $projs := where (where $pr (printf ".Params.%s" (first 1 $teste)) "ne" nil) (printf ".Params.%s" (first 1 $teste)) "ne" ""}}
-
-	{{ .Scratch.add "projs" $projs }}
 {{ else }}
-	     <script>console.log({{ "teste3" }});</script>
-	{{ $projs := "" }}
+	{{ $.Scratch.Set "projs" $pr}}
 {{ end }}
-	     <script>console.log({{ (index ($.Scratch.Get "projs") 0) }});</script>
-
-{{ $projs := where (where $pr ".Params.url_dataset" "ne" nil) ".Params.url_dataset" "ne" ""}}
-{{ $projs := $projs | union (where (where $pr ".Params.url_data" "ne" nil) ".Params.url_data" "ne" "") }}
-{{ $projs := $projs | union (where (where $pr ".Params.url_code" "ne" nil) ".Params.url_code" "ne" "") }}
-{{ $projs := $projs | union (where (where $pr ".Params.url_video" "ne" nil) ".Params.url_video" "ne" "") }}
 
 {{ $pubs := where site.RegularPages "Type" "publication" }}
-{{ $publications := where $pubs ".Params.url_dataset" "ne" nil }}
-{{ $publications := $publications | union (where $pubs ".Params.url_data" "ne" nil ) }}
-{{ $publications := $publications | union (where $pubs ".Params.url_github" "ne" nil ) }}
-{{ $publications := $publications | union (where $pubs ".Params.url_code" "ne" nil ) }}
+{{/* filter publications pages */}}
+{{ if (len $filter_params) ge 1 }}
+	{{ $publications := where (where $pubs (printf ".Params.%s" (index $filter_params 0)) "ne" nil) (printf ".Params.%s" (index $filter_params 0)) "ne" ""}}
+	{{ $.Scratch.Set "publications" $publications}}
+	{{ range (after 1 $filter_params) }}
+		{{ $.Scratch.Set "publications" ($.Scratch.Get "publications" | union (where (where $pubs (printf ".Params.%s" .) "ne" nil) (printf ".Params.%s" .) "ne" "")) }}
+	{{ end }}
+{{ else }}
+	{{ $.Scratch.Set "publications" $pubs}}
+{{ end }}
+
+{{ $projs := ($.Scratch.Get "projs") }}
+{{ $publications := ($.Scratch.Get "publications") }}
 
 {{ $query := $publications | union $projs }}
 
