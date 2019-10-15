@@ -37,27 +37,24 @@
 {{ $projs := ($.Scratch.Get "projs") }}
 {{ $publications := ($.Scratch.Get "publications") }}
 
- {{ range $category := $categories }}
+  {{ range $category := $categories }}
     {{ $p := where $projs "Params.categories" "intersect" (slice $category.category) }}
 		{{ range (first 1 $p) }}
 		  {{ $project_name := .File.ContentBaseName }}
-			{{ $.Scratch.Set "p_names" (slice $project_name) }}
 			{{ $pu := where $publications ".Params.projects" "intersect" (slice $project_name) }} 
 			{{ $.Scratch.Set "order_query" (slice . ) }}
 			{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append $pu ) }}
 				{{ range (after 1 $p) }}
 					{{ $project_name := .File.ContentBaseName }}
-					{{ $.Scratch.Set "p_names" ($.Scratch.Get "p_names" | append $project_name ) }}
 			    {{ $pu := where $publications ".Params.projects" "intersect" (slice $project_name) }} 
 					{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append . ) }}
 					{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append $pu ) }}
 				{{ end }}
 			{{ end }}
-			{{ $p_names := $.Scratch.Get "p_names" }}
+			{{ $.Scratch.Set (printf "%s" (urlize $category.category)) ($.Scratch.Get "order_query") }}
 
 
-    <script>console.log({{ $.Scratch.Get "p_names" }});</script>
-    <script>console.log({{ $.Scratch.Get "order_query" }});</script>
+    <script>console.log({{ $.Scratch }});</script>
 
   {{ end }}
 
@@ -77,18 +74,23 @@
     <h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }}</h1>
 		{{ with $st.Params.subtitle }}  <p>{{ . | markdownify | emojify }}</p>{{ end }}
 		<br>
-		<p> <i class="fas fa-project-diagram pub-icon" aria-hidden="true"></i> Projects </p> 
-		<p> <i class="far fa-file-alt pub-icon" aria-hidden="true"></i> Publications </p>
+		<p> <i class="fas fa-project-diagram pub-icon" aria-hidden="true"></i> Project </p> 
+		<p> <i class="far fa-file-alt pub-icon" aria-hidden="true"></i> Publication </p>
   </div>
   <div class="col-12 col-lg-8">
 
     {{ with $st.Content }}{{ . }}{{ end }}
 
-    {{ range $post := $query }}
+    {{ range $category := $categories }}
+			{{ $query := $.Scratch.Get (printf "%s" (urlize $category.category)) }}
 
-        {{ partial "datacode_li_list" . }}
+      <h2>{{ with $category }}{{ .category | markdownify | emojify }}{{ end }}</h2>
+			{{ range $post := $query }}
 
-    {{end}}
+					{{ partial "datacode_li_list" . }}
+
+			{{ end }}
+		{{ end }}
 
   </div>
 </div>

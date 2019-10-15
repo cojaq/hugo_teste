@@ -74,26 +74,6 @@ tags:
     category = "Image Transformation"
     description = "orem ipsum iaculis blandit libero senectus erat ultricies, ultrices aptent conubia duis morbi habitant sociosqu ac, praesent bibendum fusce condimentum auctor tristique. venenatis platea faucibus iaculis conubia gravida purus luctus pulvinar cras, aliquam cras fames quisque odio nisi nibh ultricies justo curabitur, ligula aliquet est sodales tristique semper tempus purus. himenaeos integer venenatis facilisis ar"
 
-  [[content.filter_button]]
-    name = "Object Detection"
-    category = "Object Detection"
-    description = "dictumst blandit at faucibus vel ornare, iaculis nisl justo nam consectetur dictum himenaeos senectus lectus ipsum lacus, mauris libero a viverra dictum ut porttitor amet imperdiet. curabitur sagittis auctor"
-
-  [[content.filter_button]]
-    name = "Astronomical Images"
-    category = "Astronomical Images"
-    description = "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"
-
-  [[content.filter_button]]
-    name = "Document Images"
-    category = "Document Images"
-    description = "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-  [[content.filter_button]]
-    name = "Projection Learning"
-    category = "Projection Learning"
-    description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-
 #choose one, or more
 categories: 
  - Image Transformation
