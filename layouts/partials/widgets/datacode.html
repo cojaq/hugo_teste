@@ -39,10 +39,26 @@
 
  {{ range $category := $categories }}
     {{ $p := where $projs "Params.categories" "intersect" (slice $category.category) }}
-    <script>console.log({{ $p }});</script>
-    {{ range $projs }}
-    <script>console.log({{ .Params.categories }});</script>
-    {{ end }}
+		{{ range (first 1 $p) }}
+		  {{ $project_name := .File.ContentBaseName }}
+			{{ $.Scratch.Set "p_names" (slice $project_name) }}
+			{{ $pu := where $publications ".Params.projects" "intersect" (slice $project_name) }} 
+			{{ $.Scratch.Set "order_query" (slice . ) }}
+			{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append $pu ) }}
+				{{ range (after 1 $p) }}
+					{{ $project_name := .File.ContentBaseName }}
+					{{ $.Scratch.Set "p_names" ($.Scratch.Get "p_names" | append $project_name ) }}
+			    {{ $pu := where $publications ".Params.projects" "intersect" (slice $project_name) }} 
+					{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append . ) }}
+					{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append $pu ) }}
+				{{ end }}
+			{{ end }}
+			{{ $p_names := $.Scratch.Get "p_names" }}
+
+
+    <script>console.log({{ $.Scratch.Get "p_names" }});</script>
+    <script>console.log({{ $.Scratch.Get "order_query" }});</script>
+
   {{ end }}
 
 
