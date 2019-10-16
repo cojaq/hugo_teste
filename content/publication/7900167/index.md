@@ -12,6 +12,8 @@ publication: "*2016 23rd International Conference on Pattern Recognition (ICPR)*
 tags: ["feature extraction","handwritten character recognition","learning (artificial intelligence)","mathematics computing","optical character recognition","dominant symbol histograms","spatial relation classification","spatial relation recognition","handwritten mathematical expression recognition","spatial relation features","subexpression bounding box","intra-subexpression information","symbol size","artificial neural network training","feature learning","dominant symbols","feature evaluation","Histograms","Feature extraction","Electronic mail","Handwriting recognition","Shape","Data mining"]
 doi: "10.1109/ICPR.2016.7900167"
 
+draft: true
+
 #choose one, or more
 categories: 
  - Document Images

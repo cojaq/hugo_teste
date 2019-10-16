@@ -10,6 +10,8 @@ publication: "*2017 30th SIBGRAPI Conference on Graphics, Patterns and Images (S
 tags: ["convolution","document image processing","feature extraction","image classification","image segmentation","multilayer perceptrons","neural nets","text analysis","text segmentation","document analysis related applications","document image","shape related features","component images","connected components","nontext classification","text classification","multilayer perceptrons","convolutional neural networks","Feature extraction","Training","Image segmentation","Shape","Data mining","Neural networks","Layout","text segmentation","connected component classification","convolutional neural network"]
 doi: "10.1109/SIBGRAPI.2017.66"
 
+draft: true
+
 #choose one, or more
 categories: 
  - Document Images

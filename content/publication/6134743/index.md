@@ -10,6 +10,8 @@ publication: "*2011 24th SIBGRAPI Conference on Graphics, Patterns and Images*"
 tags: ["bar codes","feature extraction","Haar transforms","image classification","image coding","object detection","fast QR code detection","arbitrarily acquired image","2D barcode","images symbol region","accessibility technology","Viola-Jones rapid object detection framework","image region","fast feature calculation approach","pattern classification","finder pattern detection","post processing algorithm","Training","Prototypes","Boosting","Object detection","Feature extraction","Face detection","Decoding","QR code","2D barcode","Haar-like features","cascade classifier","boosting","classification","pattern recognition"]
 doi: "10.1109/SIBGRAPI.2011.16"
 
+draft: true
+
 #choose one, or more
 categories: 
  - Object Detection

@@ -11,6 +11,8 @@ tags: ["Structural pattern analysis", "Shape information", "Handwriting recognit
 url_pdf: "http://www.sciencedirect.com/science/article/pii/S0031320314003768"
 doi: "https://doi.org/10.1016/j.patcog.2014.09.015"
 
+draft: true
+
 #choose one, or more
 categories: 
  - Document Images
