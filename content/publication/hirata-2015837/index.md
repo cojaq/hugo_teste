@@ -10,5 +10,9 @@ publication: "*Pattern Recognition*"
 tags: ["Structural pattern analysis", "Shape information", "Handwriting recognition", "Linear assignment problem", "Ground-truth annotation", "Mathematical expression dataset"]
 url_pdf: "http://www.sciencedirect.com/science/article/pii/S0031320314003768"
 doi: "https://doi.org/10.1016/j.patcog.2014.09.015"
+
+#choose one, or more
+categories: 
+ - Document Images
 ---
 

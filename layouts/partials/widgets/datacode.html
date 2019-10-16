@@ -54,11 +54,10 @@
 			{{ $.Scratch.Set (printf "%s" (urlize $category.category)) ($.Scratch.Get "order_query") }}
 
 
-    <script>console.log({{ $.Scratch }});</script>
 
   {{ end }}
 
-
+	{{/*  <script>console.log({{ $pu }});</script> */}}
 
 {{ $query := $publications | union $projs }}
 
@@ -82,14 +81,34 @@
     {{ with $st.Content }}{{ . }}{{ end }}
 
     {{ range $category := $categories }}
-			{{ $query := $.Scratch.Get (printf "%s" (urlize $category.category)) }}
+			{{ $p := where $projs "Params.categories" "intersect" (slice $category.category) }}
+			{{ $pu := where $publications "Params.categories" "intersect" (slice $category.category) }}
+			{{ $query := $pu | union $p }}
+			{{ with $q := $query }}
 
-      <h2>{{ with $category }}{{ .category | markdownify | emojify }}{{ end }}</h2>
-			{{ range $post := $query }}
+				<h2>{{ with $category }}{{ .category | markdownify | emojify }}{{ end }}</h2>
+				{{ range $post := $q }}
 
-					{{ partial "datacode_li_list" . }}
+						{{ partial "datacode_li_list" . }}
 
+				{{ end }}
 			{{ end }}
+		{{ end }}
+
+		{{ $categories_names := (apply $categories "index" "." "category") }}
+		{{ $p := where $projs "Params.categories" "intersect" $categories_names }}
+		{{ $complement_pr := $projs | complement $p }}
+		{{ $pu := where $publications "Params.categories" "intersect" $categories_names }}
+		{{ $complement_pu := $publications | complement $pu }}
+		{{ $query := $complement_pu | union $complement_pr }}
+		
+		{{ $non_category_text := "Non-categorized Items" }}
+
+		<h2>{{ with $non_category_text }}{{ . | markdownify | emojify }}{{ end }}</h2>
+		{{ range $post := $query }}
+
+				{{ partial "datacode_li_list" . }}
+
 		{{ end }}
 
   </div>

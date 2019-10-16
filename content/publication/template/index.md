@@ -78,6 +78,14 @@ abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere 
 # Summary. An optional shortened abstract.
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
 
+#choose one, or more
+#categories: 
+# - Image Transformation
+# - Object Detection
+# - Astronomical Images
+# - Document Images
+# - Projection Learning
+
 tags:
 - Source Themes
 featured: false

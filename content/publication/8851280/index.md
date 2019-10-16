@@ -10,6 +10,10 @@ publication: "*IEEE Transactions on Visualization and Computer Graphics*"
 tags: ["Benchmark testing","Data visualizatiou","Machine learning","Scalability","Extraterrestrial measurements","Taxonomy","Dimensionality reduction","quality metrics","benchmarking","quantitative analysis","design space"]
 doi: "10.1109/TVCG.2019.2944182"
 
+#choose one, or more
+categories: 
+ - Projection Learning
+
 url_dataset: https://mespadoto.github.io/proj-quant-eval/
 
 projects:

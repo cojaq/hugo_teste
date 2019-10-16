@@ -10,6 +10,10 @@ publication: "*2018 31st SIBGRAPI Conference on Graphics, Patterns and Images (S
 tags: ["convolutional neural nets","document image processing","graph theory","image segmentation","learning (artificial intelligence)","edge removal problem","close connected components","fuzzy over-segmentation","convolutional neural network","page components detection","document image","machine learning approach","graph-based page segmentation","Image segmentation","Layout","Image edge detection","Machine learning","Training","Page segmentation", "document image", "machine learning", "graph", "connected components classification", "convolutional neural network"]
 doi: "10.1109/SIBGRAPI.2018.00061"
 
+#choose one, or more
+categories: 
+ - Document Images
+
 profile: false
 
 projects:

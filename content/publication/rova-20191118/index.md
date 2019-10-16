@@ -9,6 +9,10 @@ featured: false
 publication: "*EuroVis Workshop on Visual Analytics (EuroVA)*"
 doi: "10.2312/eurova.20191118"
 
+#choose one, or more
+categories: 
+ - Projection Learning
+
 url_dataset: https://mespadoto.github.io/dbm/
 
 projects:

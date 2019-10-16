@@ -9,5 +9,9 @@ featured: false
 publication: "*2017 14th IAPR International Conference on Document Analysis and Recognition (ICDAR)*"
 tags: ["convolution","feedforward neural nets","image classification","learning (artificial intelligence)","music","image operator learning","staff line removal","image transformations","pixel-wise local functions","machine learning techniques","music score images","CNN classification","finite support window","convolutional neural networks","Microsoft Windows","Training","Windows","Computational modeling","Image segmentation","Task analysis","Convolution","Image operator learning","convolutional neural networks","image processing","staff line removal"]
 doi: "10.1109/ICDAR.2017.18"
+
+#choose one, or more
+categories: 
+ - Image Transformation
 ---
 

@@ -9,5 +9,9 @@ featured: false
 publication: "*2018 13th IAPR International Workshop on Document Analysis Systems (DAS)*"
 tags: ["feature extraction","handwritten character recognition","mathematics computing","neural nets","object detection","online handwritten graphics","symbol detection techniques","single graphic type","Faster R-CNN object detection algorithm","online recognition context","mathematical expression datasets","general graphic understanding methods","deep neural networks","feature extractors","publicly available flowchart","mathematical expression","Feature extraction","Training","Proposals","Object detection","Shape","Neural networks","Handwriting recognition","symbol recognition","object detection","Faster R-CNN"]
 doi: "10.1109/DAS.2018.79"
+
+#choose one, or more
+categories: 
+ - Document Images
 ---
 

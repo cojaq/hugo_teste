@@ -9,5 +9,9 @@ featured: false
 publication: "*Journal of Mathematical Imaging and Vision*"
 url_pdf: "https://doi.org/10.1007/s10851-012-0355-x"
 doi: "10.1007/s10851-012-0355-x"
+
+#choose one, or more
+categories: 
+ - Object Detection
 ---
 

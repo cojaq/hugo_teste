@@ -8,5 +8,9 @@ abstract: ""
 featured: false
 publication: "*Proceedings of the 13th International Joint Conference on Computer Vision, Imaging and Computer Graphics Theory and Applications - Volume 5: VISAPP,*"
 doi: "10.5220/0006626703590366"
+
+#choose one, or more
+categories: 
+ - Projection Learning
 ---
 

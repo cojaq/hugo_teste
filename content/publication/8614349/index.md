@@ -10,6 +10,9 @@ publication: "*2018 31st SIBGRAPI Conference on Graphics, Patterns and Images (S
 tags: ["data visualisation","image classification","learning (artificial intelligence)","dimensionality-reduction projection","majority class label","sample density","high-dimensional decision boundaries","high-dimensional input space","machine learning","color-coded sample scatterplots","confusion zones","free parameters","dimensionality reduction methods","image-based visualization","classifier decision boundaries","color-code relevant classifier outputs","Two dimensional displays","Visualization","Training","Dimensionality reduction","Color","Brightness","Task analysis","visualization","machine learning"]
 doi: "10.1109/SIBGRAPI.2018.00052"
 
+#choose one, or more
+categories: 
+ - Object Detection
 
 url_dataset: https://mespadoto.github.io/dbm/
 

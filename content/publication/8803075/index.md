@@ -9,5 +9,9 @@ featured: false
 publication: "*2019 IEEE International Conference on Image Processing (ICIP)*"
 tags: ["QR code","deep learning","single shot detector","part-based object detection"]
 doi: "10.1109/ICIP.2019.8803075"
+
+#choose one, or more
+categories: 
+ - Object Detection
 ---
 

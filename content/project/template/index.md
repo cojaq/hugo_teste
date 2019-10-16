@@ -59,7 +59,6 @@ authors:
  - nina
  - hirata
 
-
 profile: false
 draft: true
 
@@ -68,13 +67,7 @@ tags:
  - high condensed info extraction 
  - low latency document generatos
 
-
-  [[content.filter_button]]
-    name = "Image-to-Image Transformation"
-    category = "Image Transformation"
-    description = "orem ipsum iaculis blandit libero senectus erat ultricies, ultrices aptent conubia duis morbi habitant sociosqu ac, praesent bibendum fusce condimentum auctor tristique. venenatis platea faucibus iaculis conubia gravida purus luctus pulvinar cras, aliquam cras fames quisque odio nisi nibh ultricies justo curabitur, ligula aliquet est sodales tristique semper tempus purus. himenaeos integer venenatis facilisis ar"
-
-#choose one, or more
+#choose one, or more ["Image Transformation","Object Detection","Astronomical Images","Document Images","Projection Learning"]
 categories: 
  - Image Transformation
  - Object Detection
