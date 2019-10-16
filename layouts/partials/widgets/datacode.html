@@ -102,13 +102,15 @@
 		{{ $complement_pu := $publications | complement $pu }}
 		{{ $query := $complement_pu | union $complement_pr }}
 		
-		{{ $non_category_text := "Non-categorized Items" }}
+		{{ with $q := $query }}
+			{{ $non_category_text := "Non-categorized Items" }}
 
-		<h2>{{ with $non_category_text }}{{ . | markdownify | emojify }}{{ end }}</h2>
-		{{ range $post := $query }}
+			<h2>{{ with $non_category_text }}{{ . | markdownify | emojify }}{{ end }}</h2>
+			{{ range $post := $query }}
 
-				{{ partial "datacode_li_list" . }}
+					{{ partial "datacode_li_list" . }}
 
+			{{ end }}
 		{{ end }}
 
   </div>
