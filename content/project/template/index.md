@@ -96,7 +96,10 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
+#url_code and url_dataset are used to show content in (data + code) section
 url_code: ""
+url_dataset: ""
+
 url_pdf: ""
 url_slides: ""
 url_video: ""

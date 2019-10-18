@@ -37,10 +37,8 @@ image:
 #   icon_pack: fab
 #   icon: twitter
 
-code: "teste1"
-data: "teste2"
+url_code: "teste1"
 
-url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
