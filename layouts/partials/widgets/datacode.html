@@ -4,114 +4,117 @@
 {{ $ := .root }}
 {{ $st := .page }}
 
-{{ $filter_params := $st.Params.filter_params }}
+{{/* {{ $filter_params := $st.Params.filter_params }} */}}
+{{ $filter_params := (slice "url_code" "url_dataset") }}
 
 {{ $headless := (index ($.Site.GetPage "/projects").Resources 0) }}
 
 {{ $categories := where $headless.Params.content.filter_button "category" "ne" "All" }}
+{{ $categories_names := (apply $categories "index" "." "category") }}
 
-{{ $pr := where site.RegularPages "Type" "project" }}
 {{/* filter projects pages */}}
-{{ if (len $filter_params) ge 1 }}
-	{{ $projs := where (where $pr (printf ".Params.%s" (index $filter_params 0)) "ne" nil) (printf ".Params.%s" (index $filter_params 0)) "ne" ""}}
-	{{ $.Scratch.Set "projs" $projs}}
-	{{ range (after 1 $filter_params) }}
-		{{ $.Scratch.Set "projs" ($.Scratch.Get "projs" | union (where (where $pr (printf ".Params.%s" .) "ne" nil) (printf ".Params.%s" .) "ne" "")) }}
-	{{ end }}
-{{ else }}
-	{{ $.Scratch.Set "projs" $pr}}
-{{ end }}
+{{ $pr := where site.RegularPages "Type" "project" }}
+{{ $projects := where (where $pr ".Params.url_code" "ne" nil) ".Params.url_code" "ne" ""}}
+{{ $projects := $projects | union (where (where $pr ".Params.url_dataset" "ne" nil) ".Params.url_dataset" "ne" "") }}
 
-{{ $pubs := where site.RegularPages "Type" "publication" }}
 {{/* filter publications pages */}}
-{{ if (len $filter_params) ge 1 }}
-	{{ $publications := where (where $pubs (printf ".Params.%s" (index $filter_params 0)) "ne" nil) (printf ".Params.%s" (index $filter_params 0)) "ne" ""}}
-	{{ $.Scratch.Set "publications" $publications}}
-	{{ range (after 1 $filter_params) }}
-		{{ $.Scratch.Set "publications" ($.Scratch.Get "publications" | union (where (where $pubs (printf ".Params.%s" .) "ne" nil) (printf ".Params.%s" .) "ne" "")) }}
-	{{ end }}
-{{ else }}
-	{{ $.Scratch.Set "publications" $pubs}}
-{{ end }}
+{{ $pubs := where site.RegularPages "Type" "publication" }}
+{{ $publications := where (where $pubs ".Params.url_code" "ne" nil) ".Params.url_code" "ne" ""}}
+{{ $publications := $publications | union (where (where $pubs ".Params.url_dataset" "ne" nil) ".Params.url_dataset" "ne" "") }}
 
-{{ $projs := ($.Scratch.Get "projs") }}
-{{ $publications := ($.Scratch.Get "publications") }}
+{{/*			{{ $categories_names := (apply $categories "index" "." "category") }}
+{{ $p := where $projs "Params.categories" "intersect" $categories_names }}
+{{ $complement_pr := $projs | complement $p }}  */}}
 
-  {{ range $category := $categories }}
-    {{ $p := where $projs "Params.categories" "intersect" (slice $category.category) }}
-		{{ range (first 1 $p) }}
-		  {{ $project_name := .File.ContentBaseName }}
-			{{ $pu := where $publications ".Params.projects" "intersect" (slice $project_name) }} 
-			{{ $.Scratch.Set "order_query" (slice . ) }}
-			{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append $pu ) }}
-				{{ range (after 1 $p) }}
-					{{ $project_name := .File.ContentBaseName }}
-			    {{ $pu := where $publications ".Params.projects" "intersect" (slice $project_name) }} 
-					{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append . ) }}
-					{{ $.Scratch.Set "order_query" ($.Scratch.Get "order_query" | append $pu ) }}
-				{{ end }}
-			{{ end }}
-			{{ $.Scratch.Set (printf "%s" (urlize $category.category)) ($.Scratch.Get "order_query") }}
-
-
-
-  {{ end }}
-
-	{{/*  <script>console.log({{ $pu }});</script> */}}
-
-{{ $query := $publications | union $projs }}
+{{ $query := $publications | union $projects }}
 
 {{/* Sort */}}
-<style>
-  h3.article.title {
-    color: black;
-  }
-</style>
 
-<div class="row">
-  <div class="col-12 col-lg-4 section-heading">
-    <h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }}</h1>
-		{{ with $st.Params.subtitle }}  <p>{{ . | markdownify | emojify }}</p>{{ end }}
-		<br>
-		<p> <i class="fas fa-project-diagram pub-icon" aria-hidden="true"></i> Project </p> 
-		<p> <i class="far fa-file-alt pub-icon" aria-hidden="true"></i> Publication </p>
-  </div>
-  <div class="col-12 col-lg-8">
+<div class="universal-wrapper">
+	<div class="row">
+		<div class="col-12 col-lg-10">
+			<h1>{{ with $st.Title }}{{ . | markdownify | emojify }}{{ end }}</h1>
+			{{ with $st.Params.subtitle }}  <p>{{ . | markdownify | emojify }}</p>{{ end }}
+			<br>
+		</div>
 
-    {{ with $st.Content }}{{ . }}{{ end }}
+      {{/* Array of distinct years. */}}
+      {{ range $query.ByDate.Reverse }}
+        {{ $year := print (.Date.Format "2006") }}
+        {{ $.Scratch.SetInMap "years" $year $year }}
+      {{ end }}
 
-    {{ range $category := $categories }}
-			{{ $p := where $projs "Params.categories" "intersect" (slice $category.category) }}
-			{{ $pu := where $publications "Params.categories" "intersect" (slice $category.category) }}
-			{{ $query := $pu | union $p }}
-			{{ with $q := $query }}
+		<div class="col-12 col-lg-2">
+			<span>
+			<p> <i class="fas fa-project-diagram pub-icon" aria-hidden="true"></i> Project </p> 
+			<p> <i class="far fa-file-alt pub-icon" aria-hidden="true"></i> Publication </p>
+			</span>
+		</div>
+		<div class="col-12">
 
-				<h2>{{ with $category }}{{ .category | markdownify | emojify }}{{ end }}</h2>
-				{{ range $post := $q }}
+      {{ with $st.Content }}
+      <div class="article-style" itemprop="articleBody">{{ . }}</div>
+      {{ end }}
 
-						{{ partial "datacode_li_list" . }}
 
+      <div class="form-row mb-4">
+        <div class="col-auto">
+          <input type="search" class="filter-search" placeholder="{{ i18n "search_placeholder" }}" autocapitalize="off"
+          autocomplete="off" autocorrect="off" role="textbox" spellcheck="false">
+        </div>
+        <div class="col-auto">
+          <select class="pub-filters category-select form-control form-control-sm" data-filter-group="category">
+            <option value="*">Research Line</option>
+            {{ range $index, $category := $categories }}
+            <option value=".category-{{ (int $index) }}">
+              {{ $category.category }}
+            </option>
+            {{ end }}
+            <option value=".category-{{ (len $categories) }}">
+              Other
+            </option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <select class="pub-filters form-control form-control-sm" data-filter-group="year">
+            <option value="*">{{ i18n "date" }}</option>
+            {{ $years_sorted := $.Scratch.GetSortedMapValues "years" }}
+            {{ if $years_sorted }}
+							{{ range $year := sort $years_sorted "" "desc" }}
+								<option value=".year-{{ $year }}">
+									{{ $year }}
+								</option>
+							{{ end }}
+            {{ end }}
+          </select>
+        </div>
+			</div>
+
+      <div id="container-publications">
+			{{ range $query.ByDate.Reverse }}
+
+			  {{ if .Params.categories }}
+          {{ $.Scratch.Set "str_cat" "" }}
+					{{ $inter := intersect .Params.categories (apply $categories "index" "." "category") }}
+					{{ range $i := $inter }}
+						{{ range $index, $category := $categories }}
+							{{ if (eq $category.category $i) }}
+								{{ $.Scratch.Set "str_cat" (print ($.Scratch.Get "str_cat") (printf "category-%s " (string $index))) }}
+							{{ end }}
+						{{ end }}
+					{{ end }}
+					{{ $complement := .Params.categories | complement $inter }} 
+					{{ if $complement }}
+						{{ $.Scratch.Set "str_cat" (print ($.Scratch.Get "str_cat") (printf "category-%s " (string (len $categories)))) }}
+					{{ end }}
 				{{ end }}
+<script>console.log({{ ($.Scratch.Get "str_cat") }});</script>
+
+        <div class="grid-sizer col-lg-12 isotope-item {{ $.Scratch.Get "str_cat" }} year-{{ .Date.Format "2006" }}">
+				{{ partial "datacode_li_list" . }}
+				</div>
 			{{ end }}
-		{{ end }}
+			</div>
 
-		{{ $categories_names := (apply $categories "index" "." "category") }}
-		{{ $p := where $projs "Params.categories" "intersect" $categories_names }}
-		{{ $complement_pr := $projs | complement $p }}
-		{{ $pu := where $publications "Params.categories" "intersect" $categories_names }}
-		{{ $complement_pu := $publications | complement $pu }}
-		{{ $query := $complement_pu | union $complement_pr }}
-		
-		{{ with $q := $query }}
-			{{ $non_category_text := "Non-categorized Items" }}
-
-			<h2>{{ with $non_category_text }}{{ . | markdownify | emojify }}{{ end }}</h2>
-			{{ range $post := $query }}
-
-					{{ partial "datacode_li_list" . }}
-
-			{{ end }}
-		{{ end }}
-
-  </div>
+	</div>
 </div>

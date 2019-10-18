@@ -14,7 +14,7 @@ tags:
  - low latency document generatos
 
 categories: 
-#- Document Images
+ - Document Images
 
 date: 2019-09-08T02:10:01-03:00
 
@@ -36,6 +36,9 @@ image:
 #   url: https://twitter.com
 #   icon_pack: fab
 #   icon: twitter
+
+code: "teste1"
+data: "teste2"
 
 url_code: ""
 url_pdf: ""
