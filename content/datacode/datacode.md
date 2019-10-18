@@ -7,5 +7,5 @@ weight = 80  # Order that this section will appear.
 title = "Datasets"
 subtitle = "Projects and publications with associated files"
 
-filter_params = ["url_code", "url_github", "url_data", "url_dataset"]
+# datacode is a widget to show projects and publications where url_code or url_dataset are setted.
 +++

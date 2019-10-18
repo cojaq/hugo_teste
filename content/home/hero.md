@@ -39,5 +39,7 @@ to the **ImageU project site**.
 
 Image understanding research _and more_
 
-<span style="text-shadow: none;"><a class="github-button" href="https://github.com/imageu" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star this on GitHub">Star</a><script async defer src="https://buttons.github.io/buttons.js"></script></span>
+<p class="cta-btns">
+<a href="https://github.com/imageu" target="_blank" rel="noopener" class="hero-cta-alt pl-4">View Github <i class="fas fa-angle-right"></i></a>
+</p>
 
