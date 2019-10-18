@@ -111,6 +111,12 @@
         <span id="person-address" itemprop="address">{{ . | markdownify | emojify }}</span>
       </li>
       {{ end }}
+      {{ with site.Params.address_extra }}
+      <li>
+        <i class="fa-li fas fa-map-marker fa-2x" aria-hidden="true"></i>
+        <span id="person-address" itemprop="address">{{ . | markdownify | emojify }}</span>
+      </li>
+      {{ end }}
 
       {{ with site.Params.office_hours }}
       <li>
