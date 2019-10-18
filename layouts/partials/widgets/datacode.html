@@ -57,7 +57,7 @@
       {{ end }}
 
 
-      <div class="form-row mb-4">
+      <div class="form-row mb-3">
         <div class="col-auto">
           <input type="search" class="filter-search" placeholder="{{ i18n "search_placeholder" }}" autocapitalize="off"
           autocomplete="off" autocorrect="off" role="textbox" spellcheck="false">
@@ -73,6 +73,13 @@
             <option value=".category-{{ (len $categories) }}">
               Other
             </option>
+          </select>
+        </div>
+        <div class="col-auto">
+          <select class="pub-filters type-select form-control form-control-sm" data-filter-group="type">
+            <option value="*">Type</option>
+            <option value=".type-project"> Project </option>
+            <option value=".type-publication"> Publication </option>
           </select>
         </div>
         <div class="col-auto">
@@ -108,10 +115,10 @@
 						{{ $.Scratch.Set "str_cat" (print ($.Scratch.Get "str_cat") (printf "category-%s " (string (len $categories)))) }}
 					{{ end }}
 				{{ end }}
-<script>console.log({{ ($.Scratch.Get "str_cat") }});</script>
+				{{/* <script>console.log({{ . }});</script> */}}
 
-        <div class="grid-sizer col-lg-12 isotope-item {{ $.Scratch.Get "str_cat" }} year-{{ .Date.Format "2006" }}">
-				{{ partial "datacode_li_list" . }}
+        <div class="grid-sizer col-lg-12 isotope-item {{ $.Scratch.Get "str_cat" }} year-{{ .Date.Format "2006" }} type-{{ .Type }}">
+					{{ partial "datacode_li_list" . }}
 				</div>
 			{{ end }}
 			</div>
