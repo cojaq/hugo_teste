@@ -1,0 +1,13 @@
+---
+title: "Image-Based Visualization of Classifier Decision Boundaries"
+date: 2018-10-01
+publishDate: 2019-10-19T02:44:07.677646Z
+authors: ["Francisco C. M. Rodrigues", "hirata", "telea"]
+publication_types: ["1"]
+abstract: "Understanding how a classifier partitions a high-dimensional input space and assigns labels to the parts is an important task in machine learning. Current methods for this task mainly use color-coded sample scatterplots, which do not explicitly show the actual decision boundaries or confusion zones. We propose an image-based technique to improve such visualizations. The method samples the 2D space of a dimensionality-reduction projection and color-code relevant classifier outputs, such as the majority class label, the confusion, and the sample density, to render a dense depiction of the high-dimensional decision boundaries. Our technique is simple to implement, handles any classifier, and has only two simple-to-control free parameters. We demonstrate our proposal on several real-world high-dimensional datasets, classifiers, and two different dimensionality reduction methods."
+featured: false
+publication: "*2018 31st SIBGRAPI Conference on Graphics, Patterns and Images (SIBGRAPI)*"
+tags: ["data visualisation","image classification","learning (artificial intelligence)","dimensionality-reduction projection","majority class label","sample density","high-dimensional decision boundaries","high-dimensional input space","machine learning","color-coded sample scatterplots","confusion zones","free parameters","dimensionality reduction methods","image-based visualization","classifier decision boundaries","color-code relevant classifier outputs","Two dimensional displays","Visualization","Training","Dimensionality reduction","Color","Brightness","Task analysis","visualization","machine learning"]
+doi: "10.1109/SIBGRAPI.2018.00052"
+---
+
